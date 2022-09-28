@@ -22,4 +22,19 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 'use strict';
+let numberOfFilms;
+numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?","");
+console.log(numberOfFilms);
 
+const personalMovieDB = {
+    count : numberOfFilms,
+    movies : {},
+    actors : {},
+    genres : [],
+    privat : false 
+};
+
+const latestViewFilm = prompt("Один из последних просмотренных фильмов ?", ""),
+    ratingLatestViewFilm = +prompt("Насколько оцените его ?", "");
+  personalMovieDB.movies[latestViewFilm] = ratingLatestViewFilm;
+ console.log(personalMovieDB); 
