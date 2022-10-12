@@ -13,7 +13,14 @@ const personalMovieDB = {
 for(let i =0; i<2;i++) {
     const latestViewFilm = prompt("Один из последних просмотренных фильмов ?", ""),
         ratingLatestViewFilm = +prompt("Насколько оцените его ?", "");
-    if(latestViewFilm != null && ratingLatestViewFilm != null && latestViewFilm != "" && ratingLatestViewFilm != "" && latestViewFilm.length < 50 ) {
+    if(
+        latestViewFilm != null &&
+        ratingLatestViewFilm != null &&
+        latestViewFilm !== "" &&
+        ratingLatestViewFilm !== "" &&
+        latestViewFilm.length < 50
+    )
+    {
         personalMovieDB.movies[latestViewFilm] = ratingLatestViewFilm;
         console.log("done");
     } else {
